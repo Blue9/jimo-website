@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jimo - Be The Guide</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+      }
+      .column {
+        flex: 1;
+        padding: 10px 5px;
+        box-sizing: border-box;
+      }
+      .column.middle {
+        flex: 4;
+      }
+      .card {
+        border-radius: 18px;
+        margin-bottom: 10px;
+        transition: transform 1s ease;
+      }
+      .tile {
+        aspect-ratio: 1;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .tile img,
+      .promo img {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        object-fit: cover;
+      }
+      .promo:hover {
+        transform: scale(1.04) translateY(10px);
+      }
+      .promo img {
+        aspect-ratio: 2.12093023256;
+      }
+      #appstore {
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        background-color: inherit;
+      }
+      #appstore-logo {
+        margin: 18px auto;
+        position: relative;
+      }
+      #appstore-logo img {
+        max-width: 150px;
+        aspect-ratio: 2.99160175;
+      }
+      .beta-flag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgb(80, 141, 255);
+        color: white;
+        padding: 1px 4px;
+        border-radius: 0 4px 0 0;
+        font-size: 7px;
+        font-weight: bold;
+      }
+      .footer {
+        font-size: 10px;
+        text-align: center;
+        padding: 20px;
+      }
+      .footer:hover {
+        transform: none;
+      }
+      .footer a {
+        margin-right: 15px;
+        color: #333;
+        text-decoration: none;
+      }
+      .footer a:last-child {
+        margin-right: 0;
+      }
+    </style>
+    <style>
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+          align-items: stretch;
+          margin-bottom: 20px;
+        }
+        .column {
+          flex: none !important;
+          width: 100%;
+          padding: 0 5px;
+        }
+        .column.middle {
+          order: 1;
+        }
+        .column:first-child {
+          order: 2;
+        }
+        .column:last-child {
+          order: 3;
+        }
+        .card,
+        .tile img,
+        .promo img,
+        #appstore-logo img {
+          border-radius: 8px;
+          max-width: 100%;
+          height: auto;
+        }
+        .card {
+          margin: 10px;
+        }
+        .tile {
+          /* 20px on bottom, left, and right */
+          margin: 20px 20px 0 20px;
+        }
+        #appstore-logo {
+          text-align: center;
+        }
+        .beta-flag {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        .card:hover {
+          transform: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="column">
+      <div class="card tile"><img src="images/nyc.png" alt="Jimo map screenshot over NYC" /></div>
+      <div class="card tile"><img src="images/tokyo.png" alt="Jimo map screenshot over Tokyo" /></div>
+      <div class="card tile"><img src="images/chicago.png" alt="Jimo map screenshot over Chicago" /></div>
+    </div>
+    <div class="column middle">
+      <a href="https://go.jimoapp.com/ios">
+        <div class="card promo"><img src="images/promo.png" alt="Promotional Image" /></div>
+      </a>
+      <a href="https://go.jimoapp.com/ios">
+        <div class="card" id="appstore">
+          <div id="appstore-logo">
+            <img src="images/appstore.svg" alt="Download on the App Store" />
+            <div class="beta-flag">BETA</div>
+          </div>
+        </div>
+      </a>
+      <div class="card footer">
+        <a href="https://www.instagram.com/jimoapp">Instagram</a>
+        <a href="https://www.tiktok.com/@jimoapp">TikTok</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:hello@jimoapp.com">Email Us</a>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card tile"><img src="images/london.png" alt="Jimo map screenshot over London" /></div>
+      <div class="card tile"><img src="images/paris.png" alt="Jimo map screenshot over Paris" /></div>
+      <div class="card tile"><img src="images/la.png" alt="Jimo map screenshot over Los Angeles" /></div>
+    </div>
+  </body>
+</html>
